@@ -43,7 +43,7 @@ def valid_proof(last_hash, proof):
     guess_hash = hashlib.sha256(proof).hexdigest()
     last_guess = hashlib.sha256(last_hash).hexdigest()
     end = str(last_guess[-6:])
-    beginning  = str(guess[:6])
+    beginning  = str(guess_hash[:6])
     return beginning == end
 
 if __name__ == '__main__':
